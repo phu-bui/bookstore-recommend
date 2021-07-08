@@ -1,6 +1,6 @@
 const tf = require('@tensorflow/tfjs-node')
 const books = require("./data/web_book_data.json")
-const process = require('process')
+
 
 
 async function loadModel() {
@@ -12,6 +12,7 @@ async function loadModel() {
 	console.log('Loading Model...')
 	home_ = process.cwd()
 	model_path = "file://"+ home_ + "/model/model.json"
+	model = await tf.loadLayersModel(model_path)
 	console.log('Model Loaded Successfull')
 }
 
