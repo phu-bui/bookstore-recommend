@@ -4,11 +4,6 @@ const books = require("./data/web_book_data.json")
 
 
 async function loadModel() {
-	// console.log('Loading Model...')
-	// model = await tf.loadLayersModel("file:///Users/admin/Documents/programming/book_recommend_web_application/book-app/model/model.json", false);
-	// console.log('Model Loaded Successfull')
-	// model.summary()
-	
 	console.log('Loading Model...')
 	home_ = process.cwd()
 	model_path = "file://"+ home_ + "/model/model.json"
